@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PLACA</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <header>
+        <div class="header-title">
+            <h1>TechMap</h1>
+        </div>
+        <nav>
+            <ul class="menu">
+                <li><a href="#">PC</a></li>
+                <li><a href="#">GPU</a></li>
+                <li><a href="#">CPU</a></li>
+                <li><a href="#">Fuentes de poder</a></li>
+                <li><a href="#">Placa madre</a></li>
+                <li><a href="https://github.com/AshlyRomero/Reparacion" class="github-button">GitHub</a></li>            </ul>
+        </nav>
+    </header>
+    <div class="content">
+        <aside class="filters">
+            <h2>Filtros</h2>
+            <label><input type="checkbox" id="filter-slots" value="slots"> Ranuras</label>
+            <label><input type="checkbox" id="filter-ports" value="ports"> Puertos</label>
+            <label><input type="checkbox" id="filter-power" value="power"> Alimentación</label>
+            <label><input type="checkbox" id="filter-cooling" value="cooling"> Disipadores</label>
+            <label><input type="checkbox" id="filter-chips" value="chips"> Chips</label>        
+            
+                <!-- Agrega este contenedor -->
+                <div id="definition-container" class="definition-container">
+                    <h3 id="definition-title"></h3>
+                    <p id="definition-text"></p>
+                    <img id="definition-image" src="" alt="" style="display: none; max-width: 100%; margin-top: 10px;">
+                </div>
+            </aside>
+            
+        <main class="image-container">
+            <img src="https://cdn.pixabay.com/photo/2015/03/21/06/28/motherboard-683247_1280.png" alt="Imagen descriptiva">
+            <div class="buttons-container">
+                <button class="btn cpu chips slots" data-title="Socket del CPU" data-description="El cerebro del ordenador, encargado de ejecutar instrucciones y procesar datos." data-image="cpu-image-url">CPU</button>
+                <button class="btn pci slots" data-title="Ranuras de expansión PCIe" data-description="Ranuras para tarjetas de expansión, como tarjetas gráficas, de sonido o de red. PCIe (PCI Express) ofrece alta velocidad de transferencia de datos." data-image="pci-image-url">PCIe</button>
+                <button class="btn sata ports" data-title="Conectores SATA" data-description="Zócalos en la placa madre donde se instalan discos duros y unidades de estado sólido (SSD), permitiendo la transferencia de datos entre estos dispositivos y la placa madre." data-image="sata-image-url">SATA</button>
+                <button class="btn bios chips" data-title="Chip BIOS/UEFI" data-description="El firmware que se encarga de inicializar el hardware durante el arranque del sistema y proporciona una interfaz para la configuración del hardware." data-image="bios-image-url">BIOS</button>
+                <button class="btn power power" data-title="Conector de Alimentación" data-description="Puertos donde se conecta la fuente de alimentación del ordenador para suministrar energía a la placa madre y otros componentes." data-image="power-image-url">Alimentación</button>
+                <button class="btn io ports" data-title="Puertos I/O" data-description="Puertos en la parte trasera de la placa madre que permiten la conexión de dispositivos externos como teclado, ratón, USB, y otros periféricos." data-image="io-image-url">I/O</button>
+                <button class="btn m2 slots" data-title="Conectores M.2" data-description="Puertos para conectar unidades de almacenamiento M.2, como SSDs, que ofrecen altas velocidades de transferencia de datos." data-image="m2-image-url">M.2</button>
+                <button class="btn cmos chips power" data-title="Batería CMOS" data-description="Chip que almacena la configuración del BIOS y la hora del sistema, incluso cuando el ordenador está apagado." data-image="cmos-image-url">CMOS</button>
+                <button class="btn vrm chips power" data-title="Módulo de Regulación de Voltaje" data-description="Circuitos que regulan el voltaje suministrado a la CPU y otros componentes, asegurando un funcionamiento estable." data-image="vrm-image-url">VRM</button>
+            </div>             
+        </main>
+    </div>
+    <div id="definition-modal" class="modal">
+        <div class="modal-content">
+            <span id="close-modal" class="close">&times;</span>
+            <p id="modal-text"></p>
+        </div>
+    </div>
+
+    <div class="definition-container">
+        <p id="definition-text">Aquí va el texto de la definición.</p>
+        <button id="download-button">Descargar como imagen</button>
+    </div>
+    
+        
+   
+    <script src="js/main.js"></script>  
+</body>
+</html>
